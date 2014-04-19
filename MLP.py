@@ -9,7 +9,7 @@ class HiddenLayer(object):
 
 		if W is None:
 			W_values = numpy.asarray(rng.uniform(
-				low=numpy.sqrt(6. / (n_in + n_out)),
+				low=-numpy.sqrt(6. / (n_in + n_out)),
 				high=numpy.sqrt(6. / (n_in + n_out)),
 				size=(n_in, n_out)), dtype=theano.config.floatX)
 			if activation == theano.tensor.nnet.sigmoid:
